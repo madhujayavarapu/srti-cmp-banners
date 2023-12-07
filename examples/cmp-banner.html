@@ -12,6 +12,22 @@
     </navbar>
     <main>
         <h1>Basic CMP Banner:</h1>
+
+        
+        <!-- After adding this script, call setConsentBannerParams({uuid: <unique id> }) to set unique ID for a customer.  -->
+        <script>
+            (function () {
+                var s = document.createElement('script');
+                s.src = 'https://cdn-dev.securiti.xyz/consent/cookie-consent-sdk-loader.js';
+                s.setAttribute('data-tenant-uuid', '359f6755-3b42-4021-bd08-36963c23d350');
+                s.setAttribute('data-domain-uuid', '3548ac45-9f35-4e00-aabb-65324231ae60');
+                s.setAttribute('data-backend-url', 'https://dev.securiti.xyz');
+                s.setAttribute('data-skip-css', 'false');
+                s.defer = true;
+                var parent_node = document.head || document.body;
+                parent_node.appendChild(s);
+            })()
+        </script>
     </main>
 </body>
 </html>
